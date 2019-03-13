@@ -1,3 +1,6 @@
-# My Awesome Book
+# My JavaScript Book
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+This is my knowledge about JS.I hope I can use it when I learn new knowledge point.
+
+add【我的实践】+ 【我的理解】to every knowledge point .
+
