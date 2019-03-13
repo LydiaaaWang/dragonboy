@@ -1,10 +1,6 @@
 # 原始类型
 
-核心参考 [https://wangdoc.com/javascript/](https://wangdoc.com/javascript/)
-
-```
-
-```
+核心参考[阮一峰](https://wangdoc.com/javascript/)
 
 ##### 1. 脚本语言
 
@@ -21,6 +17,16 @@ JavaScript 是一种轻量级的脚本语言。所谓“脚本语言”（script
 3.JS的核心语法
 
 JavaScript 的核心语法部分相当精简，只包括两个部分：基本的语法构造（比如操作符、控制结构、语句）和标准库（就是一系列具有各种功能的对象比如`array`、`Date`、`Math`等）。除此之外，各种宿主环境提供额外的 API（即只能在该环境使用的接口），以便 JavaScript 调用。
+
+我的理解：浏览器提供的额外的API可以分为三大类，操作浏览器、DOM类的、web类的。服务器提供的各种操作系统deAPI、操作文件的API、网络通信的API等等。
+
+4、最简易的实验环境-Chrome浏览器
+
+直接进入- `Ctrl + Shift + J`
+
+开发者工具进入 -` Ctrl + Shift + I`
+
+进入控制台后，就可以按照提示符输入代码，然后按enter，代码就会执行，如果按`Shift + Enter` 就是代码换行，不执行。
 
 ##### 
 
