@@ -19,7 +19,7 @@ setData的成功率差不多是100%，因为只要代码没错它就会100%执�
 在utils文件夹下建立一个文件，比如叫clearData.js,然后定义一个变量叫clearData
 
 ```
-var clearData={}//使用var ,不使用const的原因是这个里边的数据得进行改动 
+var clearData={}//使用var ,不使用const的原因是这个里边的数据得进行改动
 ```
 
 然后再暴露出去让每个需要用到的页面都可以引入它使用。那么
@@ -34,5 +34,13 @@ export default clearData;
 import clearData from "../../utils/clearData.js"  //使用的是绝对路径引入的
 ```
 
+上面的export和import是ES6的语法
 
+相关链接
+
+[module.exports与exports，export与export default之间的关系和区别](https://www.cnblogs.com/fayin/p/6831071.html)
+
+[CommonJS规范](http://javascript.ruanyifeng.com/nodejs/module.html)
+
+[ES6 Module 的语法](http://es6.ruanyifeng.com/#docs/module)
 
