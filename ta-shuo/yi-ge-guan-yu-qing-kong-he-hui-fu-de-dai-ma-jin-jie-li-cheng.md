@@ -31,16 +31,72 @@ export default clearData;
 需要使用的页面怎么引入呢？
 
 ```
-import clearData from "../../utils/clearData.js"  //使用的是绝对路径引入的
+import clearData from "../../utils/clearData.js"  //可以是相对路径也可以是绝对路径,小程序上使用绝对路径不成
 ```
 
-上面的export和import是ES6的语法
+上面的export和import是ES6的语法，目前最好的模块解决方案就是用ES6.
 
-相关链接
+## 相关链接
 
 [module.exports与exports，export与export default之间的关系和区别](https://www.cnblogs.com/fayin/p/6831071.html)
 
 [CommonJS规范](http://javascript.ruanyifeng.com/nodejs/module.html)
 
 [ES6 Module 的语法](http://es6.ruanyifeng.com/#docs/module)
+
+这里边需要操作的有：
+
+删除对象的某一个属性：
+
+```js
+var a={"id":1,"name":"danlis"};
+//添加属性
+a.age=18;
+console.log(a);
+//结果：Object { id: 1, name: "danlis", age: 18 }
+//修改属性
+a.age="我怎么知道";
+//结果：Object { id: 1, name: "danlis", age: "我怎么知道" }
+//删除属性
+delete a.age;
+//结果：Object { id: 1, name: "danlis" }
+```
+
+如上 `delete a.age`或者`delete a[age]`
+
+如果希望更改某一个值那么怎么修改呢，修改后需要保存到js里边去呢。
+
+需要懂得就是这个js文件得增删改查。
+
+```
+如果想要更改属性和属性值，直接更改就成，其他模块可以读到改写后得值。
+```
+
+那么export default到底是啥意思？
+
+```
+本质上，export default就是输出一个叫做default的变量或方法，然后系统允许你为它取任意名字。
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
