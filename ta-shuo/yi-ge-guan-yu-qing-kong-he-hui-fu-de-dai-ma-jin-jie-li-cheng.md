@@ -14,3 +14,25 @@ setData的成功率差不多是100%，因为只要代码没错它就会100%执�
 
 这是看起来集成度最高的一种做法了。
 
+那么这种做法要怎么写呢？
+
+在utils文件夹下建立一个文件，比如叫clearData.js,然后定义一个变量叫clearData
+
+```
+var clearData={}//使用var ,不使用const的原因是这个里边的数据得进行改动 
+```
+
+然后再暴露出去让每个需要用到的页面都可以引入它使用。那么
+
+```
+export default clearData;
+```
+
+需要使用的页面怎么引入呢？
+
+```
+import clearData from "../../utils/clearData.js"  //使用的是绝对路径引入的
+```
+
+
+
