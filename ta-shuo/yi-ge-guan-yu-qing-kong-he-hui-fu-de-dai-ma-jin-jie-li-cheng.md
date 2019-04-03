@@ -66,10 +66,10 @@ delete a.age;
 
 如果希望更改某一个值那么怎么修改呢，修改后需要保存到js里边去呢。
 
-需要懂得就是这个js文件得增删改查。
+需要懂得就是这个js文件的增删改查。
 
 ```
-如果想要更改属性和属性值，直接更改就成，其他模块可以读到改写后得值。
+如果想要更改属性和属性值，直接更改就成，其他模块可以读到改写后得值。【from ES6阮一峰】
 ```
 
 那么export default到底是啥意思？
@@ -78,15 +78,32 @@ delete a.age;
 本质上，export default就是输出一个叫做default的变量或方法，然后系统允许你为它取任意名字。
 ```
 
+关于增删改查我是这么实验的：
 
+```
+//in my.js
+// clearData.a
+    console.log("执行这里")
+    console.log("clearData.a==", clearData.a)
+    clearData.a = clearData.a + 1
+    console.log("clearData.a+1后==", clearData.a)
+    delete clearData.a
+    console.log("删除clearData.a后==", clearData.a)
+    console.log("clearData.e====",clearData.e)
+```
 
+```
+//in messege.js
+console.log("clearData.a==", clearData.a)
+console.log("clearData.b==", clearData.b)
+clearData.e="新增加了一个e"
+```
 
+可以更改该js里的值。而且增删改查就跟普通对象没区别。我学到的：
 
-
-
-
-
-
+```
+了解一部分原理之后，直接上手运行代码是最简单快捷的方式。
+```
 
 
 
