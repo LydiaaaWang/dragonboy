@@ -13,5 +13,7 @@
   * [从已有仓库到正常使用](git/cong-yi-you-cang-ku-dao-zheng-chang-shi-yong.md)
 * [css](css.md)
   * [预处理器](css/yu-chu-li-qi.md)
-* [她说](ta-shuo.md)
+* [ta-shuo](ta-shuo.md)
+  * [jubge phoneModal](ta-shuo/jubge-phonemodal.md)
+  * [一个关于清空和恢复的代码进阶历程](ta-shuo/yi-ge-guan-yu-qing-kong-he-hui-fu-de-dai-ma-jin-jie-li-cheng.md)
 
