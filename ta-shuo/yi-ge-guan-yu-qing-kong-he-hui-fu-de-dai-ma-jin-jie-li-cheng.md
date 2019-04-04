@@ -105,11 +105,25 @@ clearData.e="新增加了一个e"
 了解一部分原理之后，直接上手运行代码是最简单快捷的方式。
 ```
 
+最终写出来的是这样子的：
 
+```js
+//in clearData.js
+var clearData={
+  addDailyCache: null,//添加日常
+  addDesireCache: null,//添加愿望
+  addQueCache: null,//编辑我的问答
+  ansCache: [],//答案缓存
+}
 
+export default clearData
+```
 
+然后在引入的地方对数据进行修改，置为null,以及删除delete.但是这样的话被说这样做不好，因为这样写跟写成全局变量没有区别。代码依然很难理解。
 
+所以更进一步的修改又来了：
 
+给这个文件加上方法，一个in,一个out方法，其他文件调用的时候只需要传入参数就能知道是否有这个缓存，以及出去的时候是否需要清空。
 
 
 
