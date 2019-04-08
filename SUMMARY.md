@@ -21,4 +21,5 @@
 * [ta-shuo](ta-shuo.md)
   * [jubge phoneModal](ta-shuo/jubge-phonemodal.md)
   * [一个关于清空和恢复的代码进阶历程](ta-shuo/yi-ge-guan-yu-qing-kong-he-hui-fu-de-dai-ma-jin-jie-li-cheng.md)
+  * [some shine](ta-shuo/some-shine.md)
 
