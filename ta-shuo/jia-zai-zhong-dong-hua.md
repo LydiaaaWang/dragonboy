@@ -10,8 +10,6 @@ codepen:
 
 集中了很多的css效果
 
-
-
 要想实现微信的那个加载中的效果，我觉得应该让图片旋转起来。
 
 会用到的两个我一直不太熟悉的属性：
@@ -19,8 +17,6 @@ codepen:
 transiton属性可以设置旋转所需要的时间
 
 transform属性可以设置旋转的效果
-
-
 
 #### 我是这么实现的：
 
@@ -79,7 +75,11 @@ transform: rotateZ(0deg);
 
 那么就用微信button的loading效果好了。
 
+那么如何把一个有自身样式的button设为什么样式都没有的呢？
 
+```
+<button loading="{{true}}" plain="{{true}}" style='border:none;'></button>
+```
 
-
+组件的width设置成空，就可以根据长度撑开的自己来，组件的width设置为0，那么就真的会是0.
 
