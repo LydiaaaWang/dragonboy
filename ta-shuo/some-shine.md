@@ -6,7 +6,6 @@ hover-class='toolHover'
 .toolHover {
     opacity:0.6;
 }
-
 ```
 
 微信有很多的icon ,这个小组件的颜色并不是固定的，可以设置任意color.设置方式是
