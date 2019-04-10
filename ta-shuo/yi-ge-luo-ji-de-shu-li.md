@@ -66,8 +66,6 @@ var needLoad = (chathistory === undefined)
 
 确实这样写语义更清晰
 
-
-
 我觉得语音转文字这里没什么问题了，然后轩哥提出来，一个细节，高度不应该不一样。十分的服气。
 
 ## 聊天页面滚动实现
@@ -75,6 +73,55 @@ var needLoad = (chathistory === undefined)
 高度改好之后，涉及到如果是最后一条，那么就把页面往上移一点：
 
 那么页面滚动的实现原理是：
+
+具体的代码是：
+
+```js
+goToBottom: function (duration, delay, initial) {
+    setTimeout(()=> {
+      var query = wx.createSelectorQuery();
+      query.select('#messageView').boundingClientRect()
+      query.exec(res => {
+        this.setData({
+          scrollTop: res[0] ? res[0].height : 10000,
+        }, () => {
+          if (initial) {
+            this.setData({
+              whitemask: false
+            }, ()=>{
+              this.setData({
+                jumpAnimation: true
+              })
+            })
+          }
+        })
+      })
+    }, delay)
+  },
+```
+
+选中的这个元素是包裹着所有聊天信息的元素，
+
+为了让体验好一点，加了一个延迟时间，
+
+还有一个动画，是scroll-view这个组件的自带的动画
+
+```
+scroll-with-animation="{{jumpAnimation}}"
+通过控制jumpAnimation的true and false 来控制是否有动画
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
