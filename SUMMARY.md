@@ -24,4 +24,5 @@
   * [some shine](ta-shuo/some-shine.md)
   * [加载中动画](ta-shuo/jia-zai-zhong-dong-hua.md)
   * [一个逻辑的梳理](ta-shuo/yi-ge-luo-ji-de-shu-li.md)
+  * [今日新知](ta-shuo/jin-ri-xin-zhi.md)
 
