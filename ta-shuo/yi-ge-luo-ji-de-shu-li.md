@@ -34,9 +34,6 @@ Only number 0-9 could inside []: session.message[index].trans
 ```js
 //显示隐藏内容
   showHideHtml:function(e){
-    // console.log(e.currentTarget.dataset.chapterindex, "外面索引");
-    // console.log(e.currentTarget.dataset.stepmodelindex, "模块索引")
-    // console.log(e.currentTarget.dataset.isshowhtml, "是否展开");
     var chapterIndex = e.currentTarget.dataset.chapterindex;
     var stepModelIndex = e.currentTarget.dataset.stepmodelindex;
     var isShowHtml = e.currentTarget.dataset.isshowhtml;
