@@ -111,17 +111,7 @@ scroll-with-animation="{{jumpAnimation}}"
 通过控制jumpAnimation的true and false 来控制是否有动画
 ```
 
+逻辑都对，但弱网的时候这样不好，因为可能还没获取到请求回来的结果，然后就翻页了。
 
-
-
-
-
-
-
-
-
-
-
-
-
+这个时候的解决方法就是使用getCurrenge的方法来获取到那个页面，并且给那个页面通过这种方式赋值。
 
