@@ -16,3 +16,11 @@ app.globalData.chathistory[user.uid] = session.message.slice(0)
 
 切后台，切前台依然会有。进入其他页面也依然会有。
 
+异步的是跟后台交互的这里，正常的代码是同步的一步一步往下执行的。
+
+## 组件化了的弹框
+
+看一下
+
+
+
