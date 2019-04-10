@@ -1,7 +1,3 @@
-
-
-
-
 ## slice方法的使用？他的优缺点？
 
 ```
@@ -12,7 +8,7 @@ app.globalData.chathistory[user.uid] = session.message.slice(0)
 
 解释：当start 为0 时， 等于说是 克隆一个新的数组，克隆后 两个数组进行各自的操作，都互不影响，
 
-app.globalData内的数据什么时候会清空：
+## app.globalData内的数据什么时候会清空：
 
 老大总是说本次登陆期间有效
 
