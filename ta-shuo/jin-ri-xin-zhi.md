@@ -26,7 +26,11 @@ app.globalData.chathistory[user.uid] = session.message.slice(0)
 
 找到包含某个字符串的索引
 
-### && 的用法
+splice\(\) splice\(\) 方法向/从数组中添加/删除项目，然后返回被删除的项目。
+
+```
+this.data.user.photo.splice(id, 1);//从index = id的地方开始删除 1个元素
+```
 
 
 
