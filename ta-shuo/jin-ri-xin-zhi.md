@@ -22,5 +22,11 @@ app.globalData.chathistory[user.uid] = session.message.slice(0)
 
 看一下
 
+### findIndex
+
+找到包含某个字符串的索引
+
+### && 的用法
+
 
 
