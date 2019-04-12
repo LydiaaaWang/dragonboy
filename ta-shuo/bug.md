@@ -14,7 +14,50 @@ getLocation这个api有三个返回函数，suc/fail/complete 如果用户既没
 
 不要改成在首页重复弹起，可以改成在打开设置那里判断一下有没有地理位置的授权，如果没有，那么就先调用一下getLoacation.然后再打开setting那个页面。
 
-最终的实现方式：
 
-每次进入那个页面的时候使用getSetting判断一下有没有，如果没有，那么就再getLocation
+
+目前找到的最有效的实现方式：
+
+每次进入那个页面的时候使用getSetting判断一下有没有，如果没有，那么就再getLocation:
+
+```
+代码的改动就只有else那里。
+wx.getSetting({
+      success: (res) => {
+        if (res.authSetting["scope.userLocation"] !== undefined) {
+          this.setData({
+            userLocation: res.authSetting["scope.userLocation"]
+          })
+        }else{
+          wx.getLocation({
+            success: (res) =>{
+              // this.setData({
+              //   userLocation: res.authSetting["scope.userLocation"]
+              // })
+            }
+          })
+        }
+        
+      }
+    })
+```
+
+当用户点击授权并使用当前位置的时候：判断一下，getSetting判断有没有，然后再判断如果有，是不是false.
+
+
+
+终于找到原因了，是因为观察api执行情况不仔细，如果点击返回，不只会执行fail,还会执行complete.
+
+另外一个就是判断条件乱写。
+
+```
+res.authSetting["scope.userLocation"]==undefiened //代表他按的是返回
+！== unde //代表对方点了同意或者拒绝
+```
+
+//如果对方没有点拒绝而是点了同意呢？
+
+如果用户点了同意，那么就应该保存下来地理位置，并且显示使用当前位置，就不应该再显示授权之类的了。
+
+
 
