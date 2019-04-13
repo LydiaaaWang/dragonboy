@@ -26,6 +26,7 @@
   * [一个逻辑的梳理](ta-shuo/yi-ge-luo-ji-de-shu-li.md)
   * [今日新知](ta-shuo/jin-ri-xin-zhi.md)
   * [bug](ta-shuo/bug.md)
+  * [emoji](ta-shuo/emoji.md)
 * [vue-backend](vue-backend.md)
   * [运行](vue-backend/yun-xing.md)
   * [代码分析](vue-backend/dai-ma-fen-xi.md)
