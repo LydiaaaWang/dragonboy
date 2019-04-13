@@ -33,11 +33,11 @@ new Vue({
 })
 ```
 
-注意，render是一个方法，h = h\(App\)是ES6的写法，即render: function\(h\) {    return h\(App\);}其中h是createElement的一个别名，关于render和JSX的介绍可以看官方文档https://cn.vuejs.org/v2/guide/render-function.html
+注意，render是一个方法，h = h\(App\)是ES6的写法，即render: function\(h\) {    return h\(App\);}其中h是createElement的一个别名，关于render和JSX的介绍可以看官方文档[https://cn.vuejs.org/v2/guide/render-function.html](https://cn.vuejs.org/v2/guide/render-function.html)
 
 to me:
 
- 找到配置文件webpack.base.conf.js中的入口文件，这里是src目录下的main.js文件，
+找到配置文件webpack.base.conf.js中的入口文件，这里是src目录下的main.js文件，
 
 ```
 entry: {
@@ -100,7 +100,6 @@ import VueRouter from 'vue-router'
 import routes from './routes.js' 
 Vue.use(VueRouter) 
 export default new VueRouter({  routes})
-
 ```
 
 发现它就只是引用了当前文件夹下的另一个路由js文件routes.js：
@@ -149,17 +148,11 @@ export default new Router({
 })
 ```
 
-那么关于路由到底有哪些东西呢？稍微浏览一下文档先
+那么关于路由到底有哪些东西呢？稍微浏览一下文档先：
 
-
-
-
+怎么浏览呢？看一遍还要敲吗?
 
 资料参考
 
 1、[拿到一个vue+webpack项目，该如何去看](https://blog.csdn.net/DreamFJ/article/details/82146779)
-
-
-
-
 
