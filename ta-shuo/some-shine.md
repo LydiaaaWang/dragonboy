@@ -32,3 +32,69 @@ a && 要执行的代码
 
 现在的长按事件用的几乎都是longpress
 
+
+
+将一个for循环的嵌套的改成了map，感觉自己棒棒哒，不知道轩哥会不会给我来个改变了，期待。
+
+```
+for (var i = 0; i < this.data.sticker.length; i++) {
+    for (var j = 0; j < this.data.sticker[i].content.length; j++) {
+      for (var z = 0; z < this.data.sticker[i].content[j].length;z++){
+        console.log("没查到")
+        if (e.detail.value == this.data.sticker[i].content[j][z].name) {
+          console.log("查询到了")
+          this.setData({
+            emojiPrevPath: this.data.sticker[i].content[j][z].path,
+            offsetLeft: 470,
+            emojiTop: this._pxToRpx(res[0].top)-280,
+            emojiTip:true
+          })
+          
+          if (this.data.emojiPrevPath || this.data.emojiTip){
+            setTimeout(() => {
+              this.setData({
+                c: false,
+                emojiTip: false
+              })
+            }, 4000)
+          }
+
+          return;
+        }
+      }
+    }
+  }
+```
+
+修改后：
+
+```
+this.data.sticker.map((sticker,sidx)=>{
+    sticker.content.map((content,cidx)=>{
+      if (e.detail.value == content[cidx].name){
+        //show
+        this.setData({
+          emojiPrevPath: content[cidx].path,
+          offsetLeft: 470,
+          emojiTop: this._pxToRpx(res[0].top) - 280,
+          emojiTip: true
+        })
+        // hide after 4s
+        if (this.data.emojiPrevPath || this.data.emojiTip) {
+          setTimeout(() => {
+            this.setData({
+              c: false,
+              emojiTip: false
+            })
+          }, 4000)
+        }
+        return;
+      }
+
+
+    })
+  })
+```
+
+
+
