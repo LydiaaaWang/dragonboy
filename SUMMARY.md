@@ -7,6 +7,7 @@
   * [1.基本语法](chapter1.md)
   * [2.原始类型](yuan-shi-lei-xing.md)
   * [3.类型转换](lei-xing-zhuan-huan.md)
+  * [4.类型的新知](4lei-xing-de-xin-zhi.md)
   * [return](return.md)
   * [对象的增删改差](dui-xiang-de-zeng-shan-gai-cha.md)
   * [this](this.md)
