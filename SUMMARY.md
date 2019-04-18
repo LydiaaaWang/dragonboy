@@ -15,6 +15,7 @@
 * [mini program](mini-program.md)
   * [beter and best](mini-program/beter-and-best.md)
   * [文档重读新知](mini-program/wen-dang-zhong-du-xin-zhi.md)
+  * [swiper组件](mini-program/swiperzu-jian.md)
 * [git](git.md)
   * [从已有仓库到正常使用](git/cong-yi-you-cang-ku-dao-zheng-chang-shi-yong.md)
 * [css](css.md)
