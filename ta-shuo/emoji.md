@@ -54,7 +54,37 @@ bindtouchend是ios上起作用的。cancel是安卓上起作用的。
 
 每一个表情有一个固定的宽高，108rpx.左右的距离也知道是34rpx.文字的高度也知道30rpx,文字与图片的上边距是6rpx,下边距是20rpx.
 
+经过我十分复杂的左边距离和上边距离计算之后，实现了目的效果，但是被几下就改的特别精简了。我都不明白为啥。我的天哪！！！！修改的这么快，思路改的也这么快。
+
+1、看懂轩哥修改的思路
+
+2、将循环map那里改成一个对象，然后设一些关键字，然后这种直接判断一下该对象里边这个属性有没有就可以了。
+
+通过x,y确定行和列，通过行和列确定index,
 
 
-经过我十分复杂的左边距离和上边距离计算之后，实现了目的效果，但是被几下就改的特别精简了。我都不明白为啥。我的天哪！！！！修改的这么快，思路改的也这么快
+
+```
+catchTouchMove(e){
+    let nowY = this._pxToRpx(e.touches[0].clientY);
+    let nowX = this._pxToRpx(e.touches[0].clientX);
+    
+    if (nowY > this.clientY && nowY < this.clientY + 328 && nowX > 25 && nowX < 725) {
+      let row = nowY > this.clientY + 164 ? 1 : 0
+      let col = Math.floor((nowX - 25) / 176)
+      let index = row * 4 + col
+      if (this.emojiArea != index) {
+        this.emojiArea = index;
+        let tempArr = this.data.sticker[this.data.stickerSet - 1].content[this.data.curPage]
+        this.setData({
+          emojiPrevPath: tempArr[index].path,
+          emojiLeft: col * 156,//这样子的写法牺牲了绝对的居中
+          emojiTop: this.clientY - (row ? 95 :260)
+        })
+      }
+    }
+  }
+```
+
+emoji这里的管理方式也很厉害：
 

@@ -34,6 +34,8 @@ a && 要执行的代码
 
 
 
+
+
 将一个for循环的嵌套的改成了map，感觉自己棒棒哒，不知道轩哥会不会给我来个改变了，期待。
 
 ```
@@ -49,7 +51,7 @@ for (var i = 0; i < this.data.sticker.length; i++) {
             emojiTop: this._pxToRpx(res[0].top)-280,
             emojiTip:true
           })
-          
+
           if (this.data.emojiPrevPath || this.data.emojiTip){
             setTimeout(() => {
               this.setData({
@@ -94,6 +96,22 @@ this.data.sticker.map((sticker,sidx)=>{
 
     })
   })
+```
+
+果然给我带来了更高级的改变：那就是直接使用一个对象去保存所有的那些值，当需要用到某一个的时候，直接取出来，而不用循环。
+
+```
+const emojiGenerator = require("emoji");
+const emoji = emojiGenerator.getEmoji()
+const sticker = emojiGenerator.getSticker()
+const stickerTip = emojiGenerator.getStickerTip()
+
+this.setData({
+    emojiTipArr: stickerTip[e.detail.value],
+    emojiTipTop: this._pxToRpx(res[0].top) - 240,
+})
+
+
 ```
 
 
