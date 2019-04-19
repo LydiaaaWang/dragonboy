@@ -80,5 +80,9 @@ for (var key in person) {
 //这样子的话就会只遍历对象自身的属性了。
 ```
 
+关于兔子数列，也叫做斐波那契数列。
+
+函数本身的作用
+
 核心参考  [阮一峰 js入门](https://wangdoc.com/javascript/types/number.html)
 
