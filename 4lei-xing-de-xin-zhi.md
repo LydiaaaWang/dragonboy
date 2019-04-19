@@ -32,9 +32,53 @@ Infinity==Infinity  // true
 
 字符串与数组是相似的，但是数组有增删改查，但是字符串是没有的。这些操作会默默地失败，但是没有错误提醒。
 
-
-
 unicode是关于字符串的。有的字符返回的length是两个，所以JavaScript 返回的字符串长度可能是不正确的。
+
+为什么要使用base64?不是为了加密，而是为了不出现特殊字符。
+
+原来js是自带了base64转化的，完全不需要去其他网站转换base64格式了。
+
+```
+function b64Encode(str) {
+  return btoa(encodeURIComponent(str));
+}
+
+function b64Decode(str) {
+  return decodeURIComponent(atob(str));
+}
+
+b64Encode('你好') // "JUU0JUJEJUEwJUU1JUE1JUJE"
+b64Decode('JUU0JUJEJUEwJUU1JUE1JUJE') // "你好"
+```
+
+对象，是JavaScript最重要的数据类型，确实是一个非常重要的类型，能简化很多循环类的操作。都是key-value.所有的key都是字符串。如果是数值，也会被转化为字符串。还有一个深化我对对象印象的，那就是属性随便增加和删除。不用在声明的时候就得有。还可以查看一个对象拥有的所有属性，使用
+
+```
+var obj = {
+  key1: 1,
+  key2: 2
+};
+
+Object.keys(obj);
+// ['key1', 'key2']
+```
+
+就可以。
+
+还可以遍历整个对象，用的是for...in...循环。
+
+这是一个成熟的方法：
+
+```
+var person = { name: '老张' };
+
+for (var key in person) {
+  if (person.hasOwnProperty(key)) {
+    console.log(key);
+  }
+}
+//这样子的话就会只遍历对象自身的属性了。
+```
 
 核心参考  [阮一峰 js入门](https://wangdoc.com/javascript/types/number.html)
 
