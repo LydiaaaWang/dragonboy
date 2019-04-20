@@ -82,7 +82,9 @@ for (var key in person) {
 
 关于兔子数列，也叫做斐波那契数列。
 
-函数本身的作用
+函数本身的作用:
+
+如果一定要省略函数参数，那么就传入undefined。
 
 核心参考  [阮一峰 js入门](https://wangdoc.com/javascript/types/number.html)
 
