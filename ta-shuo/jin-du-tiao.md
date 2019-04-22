@@ -34,13 +34,9 @@ wx.createSelectorQuery().select('.albumView').boundingClientRect(rect => {
 
 一个问题：`JSON.stringify`的作用是什么？把一个数组这样子做一个跟另外一个数组进行比较？对，这样子直接使用==就可以确定是否相等了。
 
-
-
 写一个图片上传进度组件======
 
 不使用progress组件是因为希望颜色是渐变的颜色
-
-
 
 现在需要再一次写一个组件：可是我基本上都忘了怎么写了，😭。那就再看一遍文档吧：
 
@@ -50,5 +46,9 @@ wx.createSelectorQuery().select('.albumView').boundingClientRect(rect => {
 
 这个组件只需要两个数据，那就是百分比&是否可以使用百分比，以及两个方法，显示和隐藏组件的方法。
 
+监听器如果可以用那么就更好了，但是现在的监听器需要的版本比较高。
 
+showLoading不会主动消失除非调用hideLoading 
+
+现在的问题就是怎么把百分比的数据传到页面上。。。。。。
 
