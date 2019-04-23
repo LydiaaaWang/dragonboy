@@ -56,3 +56,22 @@ showLoading不会主动消失除非调用hideLoading
 
 我有点懵，怎么就不执行aliyun的上传方法了呢！！！
 
+```
+"usingComponents": {
+    "up-progress": "../../components/up-progress/index"
+        "up-progress": "../../components/up-progress/index",
+  }
+```
+
+而且是没有组件的时候执行这个方法，有了组件就不执行方法====
+
+一个比较可疑的配置：
+
+```
+"navigationStyle": "custom"
+```
+
+排除是我组件写的有问题：证明了不是我组件写的有问题，而是这个页面有问题
+
+想着不用组件了，那让效果好一点用个`template`总行吧，结果是可以的，因为刚刚忘了把`usingComponents`去掉。
+
