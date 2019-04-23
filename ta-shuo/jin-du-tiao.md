@@ -48,7 +48,7 @@ wx.createSelectorQuery().select('.albumView').boundingClientRect(rect => {
 
 监听器如果可以用那么就更好了，但是现在的监听器需要的版本比较高。
 
-showLoading不会主动消失除非调用hideLoading
+`showLoading`不会主动消失除非调用`hideLoading`
 
 现在的问题就是怎么把百分比的数据传到页面上。。。。。。想了一个通过page传递的方法。
 
