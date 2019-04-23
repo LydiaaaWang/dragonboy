@@ -75,3 +75,17 @@ wx.createSelectorQuery().select('.albumView').boundingClientRect(rect => {
 
 想着不用组件了，那让效果好一点用个`template`总行吧，结果是可以的，因为刚刚忘了把`usingComponents`去掉。
 
+现在需要的就是看一下数据是怎么计算的，以及更新的那个函数行不行，如果ok就使用，不ok就继续用现在这个。
+
+查了一下微信公众平台社区：https://developers.weixin.qq.com/community/develop/doc/000e06415e8080732868e776f56000?highLine=onProgressUpdate 有人提出了这个问题，然后官方给出的回答是：http://mrpeak.cn/blog/http-upload-progress/  确实[Http文件上传进度为什么不准  ](http://mrpeak.cn/blog/http-upload-progress/)
+
+它的意思是不仅仅是微信这里不准，其他的也都不准，这是http机制的问题。
+
+现在只剩下了一个问题，那就是数据怎么计算的+ complete那个页面样式。
+
+得先实现了再说选择哪一种：
+
+重要的不是样式，是那个流畅的效果。不是突然的变多，而是慢慢的滑动到那一部分。
+
+
+
