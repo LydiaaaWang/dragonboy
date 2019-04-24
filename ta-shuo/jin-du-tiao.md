@@ -77,7 +77,7 @@ wx.createSelectorQuery().select('.albumView').boundingClientRect(rect => {
 
 现在需要的就是看一下数据是怎么计算的，以及更新的那个函数行不行，如果ok就使用，不ok就继续用现在这个。
 
-查了一下微信公众平台社区：https://developers.weixin.qq.com/community/develop/doc/000e06415e8080732868e776f56000?highLine=onProgressUpdate 有人提出了这个问题，然后官方给出的回答是：http://mrpeak.cn/blog/http-upload-progress/  确实[Http文件上传进度为什么不准  ](http://mrpeak.cn/blog/http-upload-progress/)
+查了一下微信公众平台社区：[https://developers.weixin.qq.com/community/develop/doc/000e06415e8080732868e776f56000?highLine=onProgressUpdate](https://developers.weixin.qq.com/community/develop/doc/000e06415e8080732868e776f56000?highLine=onProgressUpdate) 有人提出了这个问题，然后官方给出的回答是：[http://mrpeak.cn/blog/http-upload-progress/](http://mrpeak.cn/blog/http-upload-progress/)  确实[Http文件上传进度为什么不准  ](http://mrpeak.cn/blog/http-upload-progress/)
 
 它的意思是不仅仅是微信这里不准，其他的也都不准，这是http机制的问题。
 
@@ -87,5 +87,67 @@ wx.createSelectorQuery().select('.albumView').boundingClientRect(rect => {
 
 重要的不是样式，是那个流畅的效果。不是突然的变多，而是慢慢的滑动到那一部分。
 
+所以需要实现的就两个点，一个是动画，另一个是判断当前的进度到哪里了，以及去掉之前的框。
 
+animation的第二个属性是动画持续的时间。
+
+一个问题：动画只有第一次赋值的时候有效果，后来就么有效果了。
+
+一开始就给一个动画效果，让进度条慢慢的走到50%，然后如果再有真实的进展了，那么这时候再把宽度慢慢变长，但是变长的过程中是需要有动画效果的，而不是突然就变长。如果很快的就结束了，那么也不要让用户那么快就上传完，而是给一个缓慢上传的过程。
+
+使用一个滑块往右滑动的方法不行，因为是渐变色，如果想要渐变的好，那么这个策略就不行【X】
+
+找到的一堆实现进度条的方式：
+
+1、使用progress没有渐变色：
+
+```js
+<progress percent="{{progress}}" show-info="true" color="red" 
+stroke-width="50" activeColor="green" backgroundColor="#ccc" />
+var progressNum =0; //定义一个初始值0
+
+//onLoad当页面加载时执行的方法
+onLoad:function(e){
+// progressNum
+var that = this;
+var timer = setInterval(function(){
+    progressNum++;
+    //当进度条为100时清除定时任务
+    if (progressNum >= 100) clearInterval(timer);
+
+    //并且把当前的进度值设置到progress中
+    that.setData({progress: progressNum})
+})
+}
+```
+
+这个的结果是页面一进来就加载，然后值从0到100，赋值一百次。其实并不咋地，也没难度。也没思想
+
+2、通过计算css动画持续时间来计算间隔时间。
+
+这个真是一个宝呀，即使通过setInterval设置了width已经到了最大值，但是动画会慢慢的执行过去
+
+目前最大的问题就是动画没有办法从上一个地方结束的地方连着播，但是progress有这么一个设置，动画从上次播到的地方接着播。
+
+感觉现在从一般的网页上已经找不到我想要的效果了，因为要求比较高=====
+
+想要把渐变改好那么就得知道百分比代表什么意思。
+
+如何手动计算渐变色变了多少？如果有角度的情况下要怎么计算？
+
+我以为不能实现渐变，可是现在才发现是理解不够清除，当把颜色放在某个地方之后，渐变就实现了，原来动画只是决定一个缓动的效果。并不决定其他，包括背景色
+
+### **如果需要手动写动画，你认为最小时间间隔是多久，为什么？** 
+
+多数显示器默认频率是60Hz，即1秒刷新60次，所以理论上最小间隔为1/60＊1000ms ＝ 16.7ms
+
+所以如果跟刷新次数差不多的话，那么就会看不出来是在赋值没有动画，因为页面一直在刷新，但是我们肉眼看不出来。
+
+
+
+
+
+出现了一个问题，为什么会闪一下？？？？
+
+寻找一个让它不闪的方式，比如ease-in - out啥的？
 
