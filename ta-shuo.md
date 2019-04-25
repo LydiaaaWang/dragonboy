@@ -23,7 +23,7 @@ prevPage.queCaching="设置值的尝试"
 
 此时在前一个页面就可以看到这个值已经更改了。
 
-2.  比如前一个页面的数据是这样的：
+1. 比如前一个页面的数据是这样的：
 
 ```js
 page({
@@ -58,9 +58,13 @@ this.setData({
 if (prevPage.route == 'pages/question/question'){}
 ```
 
+2019.4.25新增
+
+### 使用前一个页面的函数、方法
+
+```
+curPage.upImgProgress(30)
+```
+
 关于`getCurrentPages()`的应用基本上就这些了。
-
-
-
-
 

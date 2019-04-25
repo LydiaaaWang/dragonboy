@@ -34,6 +34,7 @@
   * [进度条](ta-shuo/jin-du-tiao.md)
   * [关于版本](ta-shuo/guan-yu-ban-ben.md)
   * [我的用处](ta-shuo/wo-de-yong-chu.md)
+  * [progress2](ta-shuo/progress2.md)
 * [vue-backend](vue-backend.md)
   * [运行](vue-backend/yun-xing.md)
   * [代码分析](vue-backend/dai-ma-fen-xi.md)
