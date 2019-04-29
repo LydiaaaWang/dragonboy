@@ -81,12 +81,12 @@ function ajax(e){
 function debounce(handle, delay) {
    var timer = null;
    return function() {
-	var _this = this,		    
-	    _arg = arguments;		
-	clearTimeout(timer);		
-	timer = setTimeout(function() {			
-	    handle.apply(_this, _arg);		
-	}, delay);	
+    var _this = this,            
+        _arg = arguments;        
+    clearTimeout(timer);        
+    timer = setTimeout(function() {            
+        handle.apply(_this, _arg);        
+    }, delay);    
 }} // 其中 handle 为需要进行防抖操作的函数，delay 为延迟时间
 ```
 

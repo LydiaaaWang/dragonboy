@@ -32,10 +32,6 @@ a && 要执行的代码
 
 现在的长按事件用的几乎都是longpress
 
-
-
-
-
 将一个for循环的嵌套的改成了map，感觉自己棒棒哒，不知道轩哥会不会给我来个改变了，期待。
 
 ```
@@ -110,9 +106,15 @@ this.setData({
     emojiTipArr: stickerTip[e.detail.value],
     emojiTipTop: this._pxToRpx(res[0].top) - 240,
 })
-
-
 ```
 
+关于小程序的设置：
 
+```1
+"navigationBarTitleText": ""
+```
+
+设为空看起开效果就特别好。
+
+关于获取可视区域的height这里，由于height是会改变的，所以在使用的时候现成获取，或者就是精准把握什么情况下高度会变。
 
