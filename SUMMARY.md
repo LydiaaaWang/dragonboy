@@ -41,4 +41,6 @@
   * [代码分析](vue-backend/dai-ma-fen-xi.md)
 * [优化](you-hua.md)
   * [回调函数](you-hua/hui-diao-han-shu.md)
+  * [防抖](you-hua/fang-dou.md)
+  * [节流](you-hua/jie-liu.md)
 
