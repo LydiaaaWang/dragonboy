@@ -10,8 +10,10 @@ fill\(\)  使用固定值填充数组
 var fruits = ["Banana", "Orange", "Apple", "Mango"];
 fruits.fill("Runoob");
 输出结果：
-Runoob,Runoob,Runoob,Runoob 
+Runoob,Runoob,Runoob,Runoob
 ```
 
+for  ... of
 
+for...in
 
