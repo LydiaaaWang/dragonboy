@@ -14,7 +14,6 @@
   * [数组的一些方法](shu-zu-de-yi-xie-fang-fa.md)
   * [JSON](json.md)
   * [slice浅拷贝](slice.md)
-  * [JSON.parse\(JSON.stringify\(\)\)](jsonparsejsonstringify.md)
   * [编码](bian-ma.md)
 * [mini program](mini-program.md)
   * [beter and best](mini-program/beter-and-best.md)
