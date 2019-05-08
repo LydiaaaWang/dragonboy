@@ -118,3 +118,22 @@ this.setData({
 
 关于获取可视区域的height这里，由于height是会改变的，所以在使用的时候现成获取，或者就是精准把握什么情况下高度会变。
 
+
+
+一个写法的改进：
+
+```
+var start = []
+ for (let i = 0; i < this.data.user.photo.length; i++) {
+   start.push(i)
+ }
+```
+
+改进后：
+
+```
+var start = this.data.user.photo.map((v, i) => i)
+```
+
+
+
