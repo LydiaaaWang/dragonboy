@@ -4,3 +4,5 @@
 
 signupData  ???
 
+abTest ==2  老用户
+
