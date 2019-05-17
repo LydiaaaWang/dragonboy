@@ -17,3 +17,13 @@ for  ... of
 
 for...in
 
+
+
+使用filter进行数组的一个拷贝：对新生成的数组进行操作不会影响原来的数组
+
+```
+var arr = invite.filter(d=>d)
+```
+
+
+
