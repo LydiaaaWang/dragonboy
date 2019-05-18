@@ -26,6 +26,7 @@
   * [数据操作](mini-program/shu-ju-cao-zuo.md)
   * [location](mini-program/location.md)
   * [自定义组件](mini-program/zi-ding-yi-zu-jian.md)
+  * [storage](mini-program/storage.md)
 * [git](git.md)
   * [从已有仓库到正常使用](git/cong-yi-you-cang-ku-dao-zheng-chang-shi-yong.md)
 * [css](css.md)
