@@ -1,0 +1,4 @@
+getMenuButtonBoundingClientRect
+
+这个是根据安卓的版本来的，版本在7.0以上的才支持获取到，所以才能在这里显示
+

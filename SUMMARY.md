@@ -53,6 +53,7 @@
   * [image](ta-shuo/image.md)
   * [wx:for](ta-shuo/wxfor.md)
   * [每日超喜欢](ta-shuo/mei-ri-chao-xi-huan.md)
+  * [完成加提示](ta-shuo/wan-cheng-jia-ti-shi.md)
 * [vue-backend](vue-backend.md)
   * [运行](vue-backend/yun-xing.md)
   * [代码分析](vue-backend/dai-ma-fen-xi.md)
