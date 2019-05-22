@@ -63,4 +63,6 @@
   * [防抖debounce](you-hua/fang-dou.md)
   * [节流throttle](you-hua/jie-liu.md)
 * [css3](css.md)
+  * [triangle](css/triangle.md)
+  * [让图片动起来](css/rang-tu-pian-dong-qi-lai.md)
 
