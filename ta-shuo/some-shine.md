@@ -133,5 +133,31 @@ var start = []
 var start = this.data.user.photo.map((v, i) => i)
 ```
 
+我的一个写法：
 
+```
+checkDelete: function(sid,para) {
+   let arr = app.globalData[para].slice()
+    let index = arr.findIndex((value) => {
+      return value.session.sid == sid
+    })
+    arr.splice(index, 1)    
+    app.globalData[para] = arr.slice()
+  },
+```
+
+我不清楚什么时候使用slice.于是就这样写了。然后改成了看起来更好的写法：
+
+```
+checkDelete: function (sid, para) {
+    let index = app.globalData[para].findIndex((item) => {
+      return item.session.sid == sid
+    })
+    index >= 0 && app.globalData[para].splice(index, 1)
+},
+```
+
+具体做的优化就是：完全不需要加一个中间变量。
+
+如果没有符合条件的那么
 
