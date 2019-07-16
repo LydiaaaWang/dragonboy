@@ -1,7 +1,13 @@
 # Summary
 
 * [Introduction](README.md)
-* [gitbook使用](gitbookshi-yong.md)
+* [gitbook使用](gitbook/gitbookshi-yong.md)
+    * [markdown语法介绍](gitbook/markdown.md)
+    * [基础使用](gitbook/basic.md)
+    * [高级扩展](gitbook/advanced.md)
+* [git](git/git.md)
+  * [阮一峰教程](git/README.md)
+  * [从已有仓库到正常使用](git/cong-yi-you-cang-ku-dao-zheng-chang-shi-yong.md)
 * [前端分析](qian-duan-fen-xi.md)
 * [JS](js.md)
   * [1.基本语法](chapter1.md)
@@ -27,8 +33,6 @@
   * [location](mini-program/location.md)
   * [自定义组件](mini-program/zi-ding-yi-zu-jian.md)
   * [storage](mini-program/storage.md)
-* [git](git.md)
-  * [从已有仓库到正常使用](git/cong-yi-you-cang-ku-dao-zheng-chang-shi-yong.md)
 * [ta-shuo](ta-shuo.md)
   * [jubge phoneModal](ta-shuo/jubge-phonemodal.md)
   * [一个关于清空和恢复的代码进阶历程](ta-shuo/yi-ge-guan-yu-qing-kong-he-hui-fu-de-dai-ma-jin-jie-li-cheng.md)
